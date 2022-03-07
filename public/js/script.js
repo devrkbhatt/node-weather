@@ -1,5 +1,5 @@
 // import axios from '../../node_modules/axios';
-console.log('welcome to weather app');
+
 
 const form = document.querySelector('#form');
 const search = document.querySelector('#input');
