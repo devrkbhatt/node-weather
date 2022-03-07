@@ -1,6 +1,6 @@
 {
 
-  "script": {
+  "scripts": {
     "start":"node src/app.js"
   },
   "dependencies": {
