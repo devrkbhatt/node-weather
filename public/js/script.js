@@ -7,7 +7,7 @@ const weatherDes = document.querySelector('.weatherDes');
 
 async function getWeatherData(address='nainital') {
     try{
-        const dataJson = await fetch(`http://localhost:3000/weather?address=${address}`);
+        const dataJson = await fetch(`/weather?address=${address}`);
         const data  = await dataJson.json();
          if(data.error) {
           add.innerText = data.error;

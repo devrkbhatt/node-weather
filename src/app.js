@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const port = process.env.port || 3000;
 const hbs = require('hbs');
 const geocode = require('./utills/geocode');
 const foreCast= require('./utills/foreCast')
@@ -12,6 +13,7 @@ const partialsPath = path.join(__dirname, '../templets/partials')
 
 // to get syatic pages from folder public
 app.use(express.static(publicPath));
+
 
 
 // to render dynamic pages from the view folders
@@ -95,6 +97,6 @@ app.get("*",(req,res) =>{
 })
 
 
-app.listen(3000,()=>{
-    console.log('express is started');
+app.listen(port,()=>{
+    console.log('express is started'+port);
 })
